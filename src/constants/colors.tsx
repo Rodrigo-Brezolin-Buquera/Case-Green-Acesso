@@ -1,8 +1,8 @@
-type pallete = {
+type Tpallete = {
     [key:string]: string | number
 }
 
-export const colors: pallete = {
+export const colors: Tpallete = {
   brown:  "#44281d" ,
   orange:  "#e4a788",	
   yellow:  "#f0e14a",	
