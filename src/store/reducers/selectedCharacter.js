@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { getCharacterDetail } from "../../api";
 
-export const getDetails = createAsyncThunk("get/details", async (name:string) => getCharacterDetail(name));
+export const getDetails = createAsyncThunk("get/details", async (name) => getCharacterDetail(name));
 
 
 const selectedCharacterSlice = createSlice({

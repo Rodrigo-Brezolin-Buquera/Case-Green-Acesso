@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
-const MainPage = lazy(() => import("../pages/Main"));
+const MainPage = lazy(() => import("../pages/Main/index.js"));
 const FavoritesPage = lazy(() => import("../pages/Favorites"));
 const DetailsPage = lazy(() => import("../pages/Details"));
 const ErrorPage = lazy(() => import("../pages/Error"));

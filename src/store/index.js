@@ -3,6 +3,7 @@ import characters from './reducers/characters';
 import favorites from './reducers/favorites';
 import selectedCharacter from './reducers/selectedCharacter';
 
+
 const store = configureStore({
     reducer:{
         characters: characters,
@@ -11,9 +12,6 @@ const store = configureStore({
     }
 })
 
-export type RootState = ReturnType<typeof store.getState>
-
-export type AppDispatch = typeof store.dispatch;
 
 
 export default store
