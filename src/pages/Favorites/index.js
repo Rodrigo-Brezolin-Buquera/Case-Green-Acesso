@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import CharacterCard from '../../components/characterCard/CharacterCard';
 import Header from '../../components/header';
+import { WrapContainer } from '../../components/styled/WrapContainer';
 import { removeFromFavorites } from '../../store/reducers/favorites';
 
 
@@ -15,16 +16,21 @@ const FavoritesPage = () => {
     dispatch(removeFromFavorites(character))
   }, [dispatch])
   console.log(favorites)
+
+  
+
+
+
   return (
     <>
       <Header navigate={navigate} />
 
       <div>FavoritesPage</div>
 
-      <div>
+      <WrapContainer>
         {favorites?.length && favorites?.map(i => <CharacterCard key={i.id} character={i} handler={() => unFavorite(i)} />)}
 
-      </div>
+      </WrapContainer>
 
 
 

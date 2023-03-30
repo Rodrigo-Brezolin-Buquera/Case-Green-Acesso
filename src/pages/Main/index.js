@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import CharacterCard from '../../components/characterCard/CharacterCard';
 import Header from '../../components/header';
+import { WrapContainer } from '../../components/styled/WrapContainer';
 import { addToFavorites, getList } from '../../store/reducers/characters';
 
 
@@ -10,7 +11,7 @@ import { addToFavorites, getList } from '../../store/reducers/characters';
 const MainPage = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch();
-  const characters = useSelector((state)  => state.characters)
+  const characters = useSelector((state) => state.characters)
 
   const saveAsFavorite = useCallback((character) => {
     dispatch(addToFavorites(character))
@@ -18,21 +19,25 @@ const MainPage = () => {
 
 
   useEffect(() => {
-    dispatch(getList()) 
+    dispatch(getList())
   }, [])
 
-  
-    return (
-      <>
-        <Header navigate={navigate}/>
-        <div>MainPage</div>
-      {characters === "carregando" ? <p>loading</p> : characters?.list?.map(i => <CharacterCard key={i.id} character={i} handler={()=>saveAsFavorite(i)} />)}
+
+  return (
+    <>
+      <Header navigate={navigate} />
+      <div>MainPage</div>
+      <WrapContainer>
+
+        {characters === "carregando" ? <p>loading</p> : characters?.list?.map(i => <CharacterCard key={i.id} character={i} handler={() => saveAsFavorite(i)} />)}
+      </WrapContainer>
 
 
 
 
-      </>
-    )
-  }
-  
-  export default MainPage
+
+    </>
+  )
+}
+
+export default MainPage

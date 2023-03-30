@@ -1,20 +1,22 @@
 import React from 'react'
 import { goToFavoritesPage, goToMainPage } from '../../routes/coordinator'
+import { StyledButton } from '../styled/StyledButton'
+import { HeaderContainer } from './styled'
 
 const Header = ({navigate}) => {
 
 
 
   return (
-    <div>
-        <button onClick={()=>goToMainPage(navigate)}>
+    <HeaderContainer>
+        <StyledButton onClick={()=>goToMainPage(navigate)}>
             Home
-        </button>
-        <button onClick={()=>goToFavoritesPage(navigate)} >
+        </StyledButton>
+        <StyledButton onClick={()=>goToFavoritesPage(navigate)} >
             Favoritos
-        </button>
+        </StyledButton>
 
-    </div>
+    </HeaderContainer>
   )
 }
 
