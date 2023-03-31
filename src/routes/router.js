@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import LoadingPortal from "../components/loadingPortal/LoadingPortal.js";
 
 const MainPage = lazy(() => import("../pages/Main/index.js"));
 const FavoritesPage = lazy(() => import("../pages/Favorites"));
@@ -9,7 +10,7 @@ const ErrorPage = lazy(() => import("../pages/Error"));
 const Router = () => {
   return (
     <BrowserRouter>
-      <Suspense fallback={<p>carregando</p>}>
+      <Suspense fallback={<LoadingPortal/>}>
         <Routes>
           <Route index element={<MainPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />

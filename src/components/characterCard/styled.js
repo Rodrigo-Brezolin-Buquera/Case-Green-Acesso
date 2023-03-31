@@ -9,9 +9,7 @@ position: relative;
 margin: 1em;
 padding: 0.5em;
 border-radius: 25px;
-
 `
-
 
 export const Avatar = styled.img`
   width: 160px;

@@ -7,15 +7,21 @@ const FilterInputs = ({ handleGender, handleName, handleOrigin, handleLocation, 
             <TextInput
                 onChange={handleName}
                 placeholder="Search by name"
+                pattern="[a-zA-Z]{0,10}"
+                title="Only up to 10 alphabetical characters are acceptable"
             />
 
             <TextInput
                 onChange={handleOrigin}
                 placeholder="Search by origin"
+                pattern="[a-zA-Z]{0,10}"
+                title="Only up to 10 alphabetical characters are acceptable"
             />
             <TextInput
                 onChange={handleLocation}
                 placeholder="Search by location"
+                pattern="[a-zA-Z]{0,10}"
+                title="Only up to 10 alphabetical characters are acceptable"
             />
 
             <StyledSelect

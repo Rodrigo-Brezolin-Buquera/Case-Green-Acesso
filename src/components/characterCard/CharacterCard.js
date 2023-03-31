@@ -1,14 +1,16 @@
 import { memo } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { colors } from '../../constants/colors'
 import HeartIcon from '../heartIcon/HeartIcon'
 import { StyledButton } from '../styled/StyledButton'
 import { Card, Avatar, BottomContainer, InfoContainer } from './styled'
 import EmptyHeart from "../../assets/EmptyHeart.svg"
 import Heart from "../../assets/Heart.svg"
+import { goToDetailsPage } from '../../routes/coordinator'
 
 const CharacterCard = ({ character, handler }) => {
   let location = useLocation()
+  const navigate = useNavigate()
 
   return (
     <Card>
@@ -24,13 +26,17 @@ const CharacterCard = ({ character, handler }) => {
             <div onClick={() => handler(character)}>
               <HeartIcon image={Heart} />
             </div>
-
             :
             <div onClick={() => handler(character)}>
               <HeartIcon image={EmptyHeart} />
             </div>
         }
-
+        <StyledButton 
+            onClick={() => goToDetailsPage(navigate, character.id)}
+            color={colors.brown}
+        >
+           Details
+         </StyledButton>
       </BottomContainer>
 
     </Card>

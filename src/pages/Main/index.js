@@ -86,7 +86,6 @@ const MainPage = () => {
       </>
 
       <WrapContainer>
-
         {characters === "carregando" ? <p>loading</p> : characterList}
       </WrapContainer>
     </>
