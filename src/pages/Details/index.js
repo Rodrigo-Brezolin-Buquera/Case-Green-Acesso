@@ -3,10 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getDetails } from "../../store/reducers/selectedCharacter";
 import { useEffect } from "react";
 import Header from "../../components/header";
-import { DetailsCard, Avatar, HeartContainer } from "./styled";
+import { DetailsCard, Avatar, HeartContainer, BackgrundPortal } from "./styled";
 import LoadingPortal from "../../components/loadingPortal/LoadingPortal";
 import ErrorMessage from "../../components/errorMessage";
 import { Title } from "../../components/styled/PageTittle";
+import Portal from "../../assets/Portal.png"
 
 
 const DetailsPage = () => {
@@ -47,7 +48,8 @@ const DetailsPage = () => {
   return (
     <>
       <Header navigate={navigate} />
-      <Title>Hey Morty, let's check out the schematics on this character! We'll need to run a diagnostic and analyze their entire molecular structure</Title>
+      <Title>Hey Morty, let's check out the schematics on this character! We'll need to run a diagnostic and analyze its entire molecular structure</Title>
+      <BackgrundPortal src={Portal} />
       {renderCharacter()}
     </>
   )
