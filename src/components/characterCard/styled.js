@@ -3,7 +3,7 @@ import { colors } from "../../constants/colors"
 
 export const Card = styled.div`
 width: 300px;
-height: 200px;
+height: 140px;
 background-color: ${colors.yellow};
 position: relative;
 margin: 1em;

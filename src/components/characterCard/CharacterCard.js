@@ -6,9 +6,7 @@ const CharacterCard = ({ character, handler }) => {
   return (
     <Card>
       <InfoContainer>
-        <h3>{character.name}</h3>
-        <p>Gender: {character.gender}</p>
-        <p>Origin: {character.origin}</p>
+        <h2>{character.name}</h2>
       </InfoContainer>
 
       <Avatar src={character.image} />
