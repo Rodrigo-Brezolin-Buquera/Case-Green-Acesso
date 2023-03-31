@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { colors } from '../../constants/colors'
 import HeartIcon from '../heartIcon/HeartIcon'
 import { StyledButton } from '../styled/StyledButton'
@@ -9,7 +9,6 @@ import Heart from "../../assets/Heart.svg"
 import { goToDetailsPage } from '../../routes/coordinator'
 
 const CharacterCard = ({ character, handler }) => {
-  let location = useLocation()
   const navigate = useNavigate()
 
   return (
@@ -22,7 +21,7 @@ const CharacterCard = ({ character, handler }) => {
       <BottomContainer>
 
         {
-          location.pathname === "/favorites" ?
+          character.favorite ?
             <div onClick={() => handler(character)}>
               <HeartIcon image={Heart} />
             </div>

@@ -1,4 +1,3 @@
-import React from 'react'
 import { goToFavoritesPage, goToMainPage } from '../../routes/coordinator'
 import LogoImg from '../logo'
 import { StyledButton } from '../styled/StyledButton'
@@ -16,9 +15,8 @@ const Header = ({navigate}) => {
             Home
         </StyledButton>
         <StyledButton onClick={()=>goToFavoritesPage(navigate)} >
-            Favoritos
+            Favorites
         </StyledButton>
-
         </div>
        
     </HeaderContainer>

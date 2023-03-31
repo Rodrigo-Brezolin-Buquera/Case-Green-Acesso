@@ -12,8 +12,12 @@ const favoritesSlice = createSlice({
     extraReducers: (builder) => {
         builder
         .addCase(addToFavorites.fulfilled, (state, {payload}) => {
-          state.push(payload)
-
+          const character = state.find(item => item.id === payload.id); 
+          if(!character){
+            const newChar =   {...payload, favorite: true} 
+            state.push(newChar)
+          }
+         
         })
         .addCase(removeFromFavorites.fulfilled, (state, {payload}) => {
           const index = state.findIndex(item => item.id === payload.id); 

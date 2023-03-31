@@ -1,9 +1,9 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { getDetails } from "../../store/reducers/selectedCharacter";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import Header from "../../components/header";
-import { DetailsCard, Avatar } from "./styled";
+import { DetailsCard, Avatar, HeartContainer } from "./styled";
 import LoadingPortal from "../../components/loadingPortal/LoadingPortal";
 import ErrorMessage from "../../components/errorMessage";
 
@@ -14,6 +14,7 @@ const DetailsPage = () => {
   const { id } = useParams()
   const navigate = useNavigate()
 
+    
   useEffect(() => {
     id && dispatch(getDetails(id))
   }, [id])
@@ -27,6 +28,7 @@ const DetailsPage = () => {
       default:
         return (
           <DetailsCard>
+          
             <Avatar src={selectedCharacter.image} />
             <h1>{selectedCharacter.name}</h1>
             <p><strong>Species:</strong> {selectedCharacter.species}</p>

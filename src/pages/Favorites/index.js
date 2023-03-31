@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import CharacterCard from '../../components/characterCard';
 import Header from '../../components/header';
-import LoadingPortal from '../../components/loadingPortal/LoadingPortal';
 import { WrapContainer } from '../../components/styled/WrapContainer';
 import { removeFromFavorites } from '../../store/reducers/favorites';
 import { StyledH2 } from './styled';
@@ -28,7 +27,7 @@ const FavoritesPage = () => {
           favorites?.length ?
             favorites?.map(i => <CharacterCard key={i.id} character={i} handler={() => unFavorite(i)} />)
             :
-            <StyledH2>You don't have favorite characters</StyledH2>
+            <StyledH2>You have no favorite characters</StyledH2>
         }
 
       </WrapContainer>

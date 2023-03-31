@@ -35,7 +35,8 @@ export const toModelCharacter = (char) => {
     image:  char.image ,
     type:  char.type ,
     location: char.location.name,
-    origin: char.origin.name
+    origin: char.origin.name,
+    favorite: false
   }
 }
 

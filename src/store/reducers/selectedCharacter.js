@@ -1,7 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { getCharacterDetail } from "../../api";
 
-export const getDetails = createAsyncThunk("get/details", async (name) => getCharacterDetail(name));
+export const getDetails = createAsyncThunk("get/details", async (name, { getState }) => {
+    const state = getState();
+    const character =  await getCharacterDetail(name)
+    const favorited = state.favorites.find(i=> i.id === character.id)
+    return favorited ? {...character, favorite: true} : character
+});
 
 
 const selectedCharacterSlice = createSlice({

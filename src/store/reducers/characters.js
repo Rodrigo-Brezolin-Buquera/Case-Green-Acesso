@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getCharacters } from "../../api";
-import {  removeFromFavorites } from "./favorites";
 
 export const getList = createAsyncThunk("get/list", async (query) => getCharacters(query)) 
 export const addToFavorites = createAsyncThunk("add/favorites", (character) => character);
@@ -15,13 +14,10 @@ const characterSlice = createSlice({
       .addCase(getList.pending, (state, { payload }) => "loading")
       .addCase(getList.rejected, (state, { payload }) => "failed")
       .addCase(addToFavorites.fulfilled, (state, { payload }) => {
+        console.log(state)
         const index = state.list.findIndex(item => item.id === payload.id); 
-        state.list.splice(index, 1)
+        state.list[index].favorite = true
       })
-      .addCase(removeFromFavorites.fulfilled, (state, { payload }) => {
-        state.list.push(payload)
-    })
-    
   },
 });
 
