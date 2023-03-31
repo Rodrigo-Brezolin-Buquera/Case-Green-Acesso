@@ -1,8 +1,15 @@
 import { memo } from 'react'
+import { useLocation } from 'react-router-dom'
+import { colors } from '../../constants/colors'
+import HeartIcon from '../heartIcon/HeartIcon'
 import { StyledButton } from '../styled/StyledButton'
 import { Card, Avatar, BottomContainer, InfoContainer } from './styled'
+import EmptyHeart from "../../assets/EmptyHeart.svg"
+import Heart from "../../assets/Heart.svg"
 
 const CharacterCard = ({ character, handler }) => {
+  let location = useLocation()
+
   return (
     <Card>
       <InfoContainer>
@@ -11,7 +18,19 @@ const CharacterCard = ({ character, handler }) => {
 
       <Avatar src={character.image} />
       <BottomContainer>
-        <StyledButton onClick={() => handler(character)} >Adicionar a favoritos</StyledButton>
+
+        {
+          location.pathname === "/favorites" ?
+            <div onClick={() => handler(character)}>
+              <HeartIcon image={Heart} />
+            </div>
+
+            :
+            <div onClick={() => handler(character)}>
+              <HeartIcon image={EmptyHeart} />
+            </div>
+        }
+
       </BottomContainer>
 
     </Card>

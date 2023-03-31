@@ -25,8 +25,8 @@ export const Avatar = styled.img`
 export const BottomContainer =  styled.div`
   width: 100%;
   position: absolute;
-  bottom: 1em;
-  right: 5px;
+  bottom: 10px;
+  left: 10px;
   display: flex;
   justify-content: flex-start;
 

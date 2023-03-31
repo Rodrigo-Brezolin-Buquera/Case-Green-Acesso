@@ -7,8 +7,8 @@ const api = axios.create({
 
 export default api;
 
-export const getCharacters = async ()=> {
-  const res = await api.get("/character") 
+export const getCharacters = async (query = "?page=1")=> {
+  const res = await api.get(`/character${query}`) 
   const modeledList = res.data.results.map(i=>toModelCharacter(i) )
   const result = {
     info: {
@@ -35,8 +35,7 @@ export const toModelCharacter = (char) => {
     image:  char.image ,
     type:  char.type ,
     location: char.location.name,
-    origin: char.origin.name,
-    favorite: false
+    origin: char.origin.name
   }
 }
 

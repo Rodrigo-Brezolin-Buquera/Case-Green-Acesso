@@ -7,7 +7,7 @@ import { WrapContainer } from '../../components/styled/WrapContainer';
 import { useInput } from '../../hooks/useInput';
 import { addToFavorites, getList } from '../../store/reducers/characters';
 import FilterInputs from './filterInputs/FilterInputs';
-
+import { PaginationContainer, ButtonContainer, PrevButton, NextButton } from './styled';
 
 const MainPage = () => {
   const navigate = useNavigate()
@@ -22,6 +22,12 @@ const MainPage = () => {
   const saveAsFavorite = useCallback((character) => {
     dispatch(addToFavorites(character))
   }, [dispatch])
+
+  const changePage = useCallback((value) => {
+    const [baseURL, query] = value.split("/character")
+    dispatch(getList(query))
+  }, [dispatch])
+
 
   useEffect(() => {
     dispatch(getList())
@@ -59,10 +65,11 @@ const MainPage = () => {
       })
       .map((i) => <CharacterCard key={i.id} character={i} handler={() => saveAsFavorite(i)} />)
 
+
   return (
     <>
       <Header navigate={navigate} />
-      <div>MainPage</div>
+
       <FilterInputs
         handleName={handleName}
         handleStatus={handleStatus}
@@ -70,6 +77,14 @@ const MainPage = () => {
         handleOrigin={handleOrigin}
         handleLocation={handleLocation}
       />
+      <>
+        <PaginationContainer>
+
+          {characters?.info?.prev && <PrevButton onClick={() => changePage(characters?.info?.prev)} >Previus Page</PrevButton>}
+          {characters?.info?.next && <NextButton onClick={() => changePage(characters?.info?.next)} >Next Page</NextButton>}
+        </PaginationContainer>
+      </>
+
       <WrapContainer>
 
         {characters === "carregando" ? <p>loading</p> : characterList}

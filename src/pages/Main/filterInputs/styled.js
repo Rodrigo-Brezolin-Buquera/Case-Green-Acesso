@@ -11,6 +11,7 @@ export const FilterContainer = styled.div`
    background-color: ${colors.green};
    border-radius: 20px;
    gap: 1em;
+   margin-top: 1em;
 `
 
 export const TextInput = styled.input`

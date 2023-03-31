@@ -22,8 +22,7 @@ const FilterInputs = ({ handleGender, handleName, handleOrigin, handleLocation, 
                 placeholder='Gender'
                 onChange={handleGender}
             >
-                <option value="" > All </option>
-
+                <option value="" > Gender </option>
                 <option value="Female" > Female </option>
                 <option value="Male" > Male </option>
                 <option value="Genderless" > Genderless </option>
@@ -34,7 +33,7 @@ const FilterInputs = ({ handleGender, handleName, handleOrigin, handleLocation, 
                 placeholder='Status'
                 onChange={handleStatus}
             >
-                <option value="" > All </option>
+                <option value="" > Status </option>
                 <option value="Alive" > Alive </option>
                 <option value="Dead" > Dead </option>
                 <option value="unknown" > Unknown </option>

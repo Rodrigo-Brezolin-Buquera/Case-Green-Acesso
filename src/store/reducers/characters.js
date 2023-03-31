@@ -1,11 +1,8 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getCharacters } from "../../api";
-import { FavoritesState, removeFromFavorites } from "./favorites";
-import { produce, Draft } from "immer";
+import {  removeFromFavorites } from "./favorites";
 
-
-
-export const getList = createAsyncThunk("get/list", async () => getCharacters()) 
+export const getList = createAsyncThunk("get/list", async (query) => getCharacters(query)) 
 export const addToFavorites = createAsyncThunk("add/favorites", (character) => character);
 
 const characterSlice = createSlice({

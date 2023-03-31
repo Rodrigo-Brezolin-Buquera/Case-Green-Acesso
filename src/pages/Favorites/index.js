@@ -15,25 +15,16 @@ const FavoritesPage = () => {
   const unFavorite = useCallback((character) => {
     dispatch(removeFromFavorites(character))
   }, [dispatch])
-  console.log(favorites)
-
-  
 
 
 
   return (
     <>
       <Header navigate={navigate} />
-
-      <div>FavoritesPage</div>
-
       <WrapContainer>
         {favorites?.length && favorites?.map(i => <CharacterCard key={i.id} character={i} handler={() => unFavorite(i)} />)}
 
       </WrapContainer>
-
-
-
     </>
   )
 }
