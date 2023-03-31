@@ -1,14 +1,15 @@
 import { useCallback, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import CharacterCard from '../../components/characterCard/CharacterCard';
+import CharacterCard from '../../components/characterCard';
+import ErrorMessage from '../../components/errorMessage';
 import Header from '../../components/header';
 import LoadingPortal from '../../components/loadingPortal/LoadingPortal';
 import { WrapContainer } from '../../components/styled/WrapContainer';
 import { useInput } from '../../hooks/useInput';
 import { addToFavorites, getList } from '../../store/reducers/characters';
-import FilterInputs from './filterInputs/FilterInputs';
-import { PaginationContainer, ButtonContainer, PrevButton, NextButton } from './styled';
+import FilterInputs from './filterInputs';
+import { PaginationContainer, PrevButton, NextButton } from './styled';
 
 const MainPage = () => {
   const navigate = useNavigate()
@@ -67,6 +68,18 @@ const MainPage = () => {
       .map((i) => <CharacterCard key={i.id} character={i} handler={() => saveAsFavorite(i)} />)
 
 
+  const renderList = () => {
+    switch (characters) {
+      case "loading":
+        return <LoadingPortal />
+      case "failed":
+        return <ErrorMessage/>
+      default:
+      return characterList
+
+    }
+  }
+
   return (
     <>
       <Header navigate={navigate} />
@@ -87,7 +100,7 @@ const MainPage = () => {
       </>
 
       <WrapContainer>
-        {characters === "carregando" ? <LoadingPortal/> : characterList}
+        { renderList()}
       </WrapContainer>
     </>
   )

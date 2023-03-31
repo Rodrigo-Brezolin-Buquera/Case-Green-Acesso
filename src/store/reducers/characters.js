@@ -12,8 +12,8 @@ const characterSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getList.fulfilled, (state, { payload }) => payload)
-      .addCase(getList.pending, (state, { payload }) => "carregando")
-      .addCase(getList.rejected, (state, { payload }) => "falha ao carregar")
+      .addCase(getList.pending, (state, { payload }) => "loading")
+      .addCase(getList.rejected, (state, { payload }) => "failed")
       .addCase(addToFavorites.fulfilled, (state, { payload }) => {
         const index = state.list.findIndex(item => item.id === payload.id); 
         state.list.splice(index, 1)

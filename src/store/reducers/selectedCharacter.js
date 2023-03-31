@@ -11,8 +11,8 @@ const selectedCharacterSlice = createSlice({
     extraReducers: (builder) => {
         builder
           .addCase(getDetails.fulfilled, (state, { payload }) => payload)
-          .addCase(getDetails.pending, (state, { payload }) => "carregando")
-          .addCase(getDetails.rejected, (state, { payload }) => "falha ao carregar")
+          .addCase(getDetails.pending, (state, { payload }) => "loading")
+          .addCase(getDetails.rejected, (state, { payload }) => "failed")
     }
 })
 

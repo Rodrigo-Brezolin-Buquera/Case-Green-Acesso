@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { StyledButton } from "../../components/styled/StyledButton"
+import { colors } from "../../constants/colors"
 
 export const PaginationContainer = styled.div`
    position: relative;
@@ -19,3 +20,4 @@ export const NextButton = styled(StyledButton)`
    position: absolute;
    right: 0;
 `
+
