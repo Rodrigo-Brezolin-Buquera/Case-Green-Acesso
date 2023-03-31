@@ -27,6 +27,7 @@ export const BottomContainer =  styled.div`
   left: 10px;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 
 `
 

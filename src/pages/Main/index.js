@@ -19,7 +19,7 @@ const MainPage = () => {
   const [status, handleStatus] = useInput("");
   const [gender, handleGender] = useInput("");
   const [origin, handleOrigin] = useInput("");
-  const [location, handleLocation] = useInput("");
+  const [species, handleSpecies] = useInput("");
 
   const saveAsFavorite = useCallback((character) => {
     dispatch(addToFavorites(character))
@@ -38,7 +38,7 @@ const MainPage = () => {
   const characterList = characters?.list?.length &&
     characters?.list.filter(i => i.name?.toLowerCase().includes(name.toLowerCase()))
       .filter(i => i.origin?.toLowerCase().includes(origin.toLowerCase()))
-      .filter(i => i.location?.toLowerCase().includes(location.toLowerCase()))
+      .filter(i => i.species?.toLowerCase().includes(species.toLowerCase()))
       .filter(i => {
         switch (status) {
           case "Alive":
@@ -89,7 +89,7 @@ const MainPage = () => {
         handleStatus={handleStatus}
         handleGender={handleGender}
         handleOrigin={handleOrigin}
-        handleLocation={handleLocation}
+        handleSpecies={handleSpecies}
       />
       <>
         <PaginationContainer>

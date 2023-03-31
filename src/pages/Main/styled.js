@@ -1,11 +1,9 @@
 import styled from "styled-components"
 import { StyledButton } from "../../components/styled/StyledButton"
-import { colors } from "../../constants/colors"
 
 export const PaginationContainer = styled.div`
    position: relative;
-   width: 220px;
-   gap: 1em;
+   width: 280px;
    margin: 1em 0 3em 0;
 `
 

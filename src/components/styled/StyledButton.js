@@ -8,7 +8,7 @@ export const StyledButton = styled.button`
     background-color: ${props => props.color || colors.green};
     color: ${colors.white};
     padding: 0.5em;
-    margin: 0 1em;
+    margin: 0 0.5em;
     border: none;
     font-size: 18px;
 `

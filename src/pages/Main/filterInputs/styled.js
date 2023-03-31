@@ -6,32 +6,37 @@ export const FilterContainer = styled.div`
    flex-wrap: wrap;
    justify-content: center;
    align-items: center;
-   width: 95%;
-   min-height: 80px;
+   width: 90%;
+   min-height: 50px;
    background-color: ${colors.green};
    border-radius: 20px;
    gap: 1em;
    margin-top: 1em;
+   padding: 0.5em;
 `
 
 export const TextInput = styled.input`
-  min-width: 50px;
+  min-width: 80px;
+  max-width: 150px;
   min-height: 25px;
   background-color: white;
   border: 0;
   border-radius: 10px;
-  &:focus {
-    outline: none;
+  font-size: 18px;
+  &:hover {
+    cursor: text;
   }
 `;
 
 export const StyledSelect = styled.select`
-  min-width: 50px;
+  min-width: 80px;
+  max-width: 90px;
   min-height: 25px;
   background-color: white;
   border: 0;
   border-radius: 10px;
-  &:focus {
-    outline: none;
+  font-size: 18px;
+  &:hover {
+    cursor: pointer;
   }
 `;

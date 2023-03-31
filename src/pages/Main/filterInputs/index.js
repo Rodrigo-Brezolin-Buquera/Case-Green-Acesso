@@ -1,7 +1,7 @@
 import { FilterContainer, TextInput, StyledSelect } from "./styled"
 
 
-const FilterInputs = ({ handleGender, handleName, handleOrigin, handleLocation, handleStatus }) => {
+const FilterInputs = ({ handleGender, handleName, handleOrigin, handleSpecies, handleStatus }) => {
     return (
         <FilterContainer>
             <TextInput
@@ -18,8 +18,8 @@ const FilterInputs = ({ handleGender, handleName, handleOrigin, handleLocation, 
                 title="Only up to 10 alphabetical characters are acceptable"
             />
             <TextInput
-                onChange={handleLocation}
-                placeholder="Search by location"
+                onChange={handleSpecies}
+                placeholder="Search by specie"
                 pattern="[a-zA-Z]{0,10}"
                 title="Only up to 10 alphabetical characters are acceptable"
             />

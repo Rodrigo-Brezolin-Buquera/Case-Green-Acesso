@@ -9,4 +9,13 @@ export const HeaderContainer = styled.header`
     justify-content: space-between;
     align-items: center;
     background-color: ${colors.yellow};
+    position:relative;
+`
+
+export const FlexContainer = styled.div`
+display: flex;
+justify-content:center;
+align-items: center;
+position: absolute;
+right: 0;
 `
