@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import CharacterCard from '../../components/characterCard/CharacterCard';
 import Header from '../../components/header';
+import LoadingPortal from '../../components/loadingPortal/LoadingPortal';
 import { WrapContainer } from '../../components/styled/WrapContainer';
 import { useInput } from '../../hooks/useInput';
 import { addToFavorites, getList } from '../../store/reducers/characters';
@@ -86,7 +87,7 @@ const MainPage = () => {
       </>
 
       <WrapContainer>
-        {characters === "carregando" ? <p>loading</p> : characterList}
+        {characters === "carregando" ? <LoadingPortal/> : characterList}
       </WrapContainer>
     </>
   )
