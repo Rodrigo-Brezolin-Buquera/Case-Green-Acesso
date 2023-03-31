@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import CharacterCard from '../../components/characterCard';
 import Header from '../../components/header';
+import { Title } from '../../components/styled/PageTittle';
 import { WrapContainer } from '../../components/styled/WrapContainer';
 import { removeFromFavorites } from '../../store/reducers/favorites';
 import { StyledH2 } from './styled';
@@ -22,6 +23,7 @@ const FavoritesPage = () => {
   return (
     <>
       <Header navigate={navigate} />
+      <Title>Aww geez, here is your favorite characters</Title>
       <WrapContainer>
         {
           favorites?.length ?

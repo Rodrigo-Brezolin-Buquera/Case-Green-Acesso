@@ -5,6 +5,7 @@ import CharacterCard from '../../components/characterCard';
 import ErrorMessage from '../../components/errorMessage';
 import Header from '../../components/header';
 import LoadingPortal from '../../components/loadingPortal/LoadingPortal';
+import { Title } from '../../components/styled/PageTittle';
 import { WrapContainer } from '../../components/styled/WrapContainer';
 import { useInput } from '../../hooks/useInput';
 import { addToFavorites, getList } from '../../store/reducers/characters';
@@ -83,6 +84,7 @@ const MainPage = () => {
   return (
     <>
       <Header navigate={navigate} />
+      <Title> Wubba lubba dub dub! It's time to choose your character, Morty! </Title>
 
       <FilterInputs
         handleName={handleName}
