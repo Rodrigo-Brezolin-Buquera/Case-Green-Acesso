@@ -1,16 +1,16 @@
 
 export const goToMainPage = (navigate) => {
-   navigate("/")
+    navigate("/")
 }
 
 export const goToFavoritesPage = (navigate) => {
     navigate("/favorites")
- }
+}
 
- export const goToDetailsPage = (navigate, id) => {
+export const goToDetailsPage = (navigate, id) => {
     navigate(`/details/${id}`)
- }
+}
 
- export const goBack = (navigate) => {
+export const goBack = (navigate) => {
     navigate(-1)
- }
+}

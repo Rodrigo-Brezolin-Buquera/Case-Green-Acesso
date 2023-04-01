@@ -6,9 +6,9 @@ const Img =  styled.img`
 `
 
 const LogoImg = () => {
-  return  (
-    <Img src={Logo}/>
-  )
+    return  (
+        <Img src={Logo}/>
+    )
 }
 
 

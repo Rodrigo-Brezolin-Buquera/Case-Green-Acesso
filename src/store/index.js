@@ -1,7 +1,7 @@
-import { configureStore } from '@reduxjs/toolkit';
-import characters from './reducers/characters';
-import favorites from './reducers/favorites';
-import selectedCharacter from './reducers/selectedCharacter';
+import { configureStore } from "@reduxjs/toolkit";
+import characters from "./reducers/characters";
+import favorites from "./reducers/favorites";
+import selectedCharacter from "./reducers/selectedCharacter";
 
 
 const store = configureStore({

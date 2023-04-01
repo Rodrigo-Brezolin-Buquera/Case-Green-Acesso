@@ -15,9 +15,9 @@ const selectedCharacterSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-          .addCase(getDetails.fulfilled, (state, { payload }) => payload)
-          .addCase(getDetails.pending, (state, { payload }) => "loading")
-          .addCase(getDetails.rejected, (state, { payload }) => "failed")
+            .addCase(getDetails.fulfilled, (state, { payload }) => payload)
+            .addCase(getDetails.pending, (state, { payload }) => "loading")
+            .addCase(getDetails.rejected, (state, { payload }) => "failed")
     }
 })
 
