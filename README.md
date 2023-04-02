@@ -58,8 +58,8 @@ Visualização de personagens, detalhes dos mesmos e adição/remoção de favor
 - Testes unitários com baixa cobertura de testes
 
 ## Imagens
-<img width="804" alt="Captura de Tela 2023-04-02 às 05 16 22" src="https://user-images.githubusercontent.com/81428197/229341796-f6eaecf3-b06e-4128-93ab-1fa100b8c8a7.png">
 <img width="787" alt="Captura de Tela 2023-04-02 às 05 16 35" src="https://user-images.githubusercontent.com/81428197/229341798-1a93018d-f001-494e-a226-7697e8a4dd09.png">
+<img width="804" alt="Captura de Tela 2023-04-02 às 05 16 22" src="https://user-images.githubusercontent.com/81428197/229341796-f6eaecf3-b06e-4128-93ab-1fa100b8c8a7.png">
 <img width="787" alt="Captura de Tela 2023-04-02 às 05 16 59" src="https://user-images.githubusercontent.com/81428197/229341799-fddb0c91-cf54-4a61-94f4-ba4a58664f2d.png">
 <img width="796" alt="Captura de Tela 2023-04-02 às 05 17 18" src="https://user-images.githubusercontent.com/81428197/229341804-96b09d5b-f288-4920-9fde-19048c185dca.png">
 
