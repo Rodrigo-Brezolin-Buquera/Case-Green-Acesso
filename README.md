@@ -30,19 +30,30 @@ Visualização de personagens, detalhes dos mesmos e adição/remoção de favor
  <h4>4º | Acesse o site pelo navegador: </h4>
 <a href="http://localhost:3000/">http://localhost:3000/</a>
 
- <h5> Testes automatizados  </h4>
+ <h4> Testes automatizados  </h4>
      npm run test
 
 ## Funcionalidades
-- Login
-  - Entrar com usuário previamente criado
+- Página Home
+  - Visualizar lista de personagens
+  - Paginação
+  - Multiplos Filtros
+  - Adicionar a favoritos
+  - Ir para detalhes
   
-- Página principal
+- Página favoritos
+  - Visualizar lista de personagens favoritos
+  - Remover dos favoritos
+  - Ir para detalhes
   
  
-- Página de detalhes do evento
+- Página de detalhes 
+  Visualizar detalhes do personagem selecionado
 
 ## O que não funciona:
+
+- Não há persistência de dados, então se voltar a página principal não haverá marcação nos favoritos 
+- Testes unitários com baixa cobertura de testes
 
 ## Imagens
 
