@@ -1,8 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import ErrorMessage from '.';
+import { render, screen } from "@testing-library/react";
+import ErrorMessage from ".";
 
-test('ErrorMessage', () => {
-  render(<ErrorMessage />);
-  const text = screen.getByText('Failed to load, try again');
-  expect(text).toBeInTheDocument();
+test("ErrorMessage", () => {
+    render(<ErrorMessage />);
+    const text = screen.getByText("Failed to load, try again");
+    expect(text).toBeInTheDocument();
 });

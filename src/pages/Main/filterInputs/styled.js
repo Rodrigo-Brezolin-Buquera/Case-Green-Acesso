@@ -6,7 +6,7 @@ export const FilterContainer = styled.div`
    flex-wrap: wrap;
    justify-content: center;
    align-items: center;
-   width: 90%;
+   max-width: 90%;
    min-height: 50px;
    background-color: ${colors.green};
    border-radius: 20px;
