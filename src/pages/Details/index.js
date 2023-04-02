@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Portal from "../../assets/Portal.png"
 import ErrorMessage from "../../components/errorMessage";
 import Header from "../../components/header";
-import LoadingPortal from "../../components/loadingPortal/LoadingPortal";
+import LoadingPortal from "../../components/loadingPortal";
 import { Title } from "../../components/styled/PageTittle";
 import { getDetails } from "../../store/reducers/selectedCharacter";
 import { DetailsCard, Avatar, BackgrundPortal } from "./styled";

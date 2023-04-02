@@ -7,7 +7,8 @@ const Img =  styled.img`
 
 const LogoImg = () => {
     return  (
-        <Img src={Logo}/>
+        <Img src={Logo}  alt={"Logo"}
+        />
     )
 }
 

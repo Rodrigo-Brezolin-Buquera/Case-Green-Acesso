@@ -6,7 +6,7 @@ color: ${colors.white};
 `
 const ErrorMessage = () => {
     return (
-        <div>index</div>
+        <ErrorH1>Failed to load, try again</ErrorH1>
     )
 }
 

@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LoadingPortal from "../components/loadingPortal/LoadingPortal.js";
+import LoadingPortal from "../components/loadingPortal/index.js";
 
 const MainPage = lazy(() => import("../pages/Main/index.js"));
 const FavoritesPage = lazy(() => import("../pages/Favorites"));

@@ -22,7 +22,8 @@ const Loading = styled.img`
 
 const LoadingPortal = () => {
     return (
-        <Loading src={Portal} />
+        <Loading src={Portal} alt={"LoadingPortal"}
+        />
     )
 }
 

@@ -12,6 +12,7 @@ height: 30px;
 const HeartIcon = ({ image }) => {
     return (
         <Icon
+            alt={"HeartIcon"}
             src={image}
         />
     )

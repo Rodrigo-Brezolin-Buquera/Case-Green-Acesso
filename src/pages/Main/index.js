@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import CharacterCard from "../../components/characterCard";
 import ErrorMessage from "../../components/errorMessage";
 import Header from "../../components/header";
-import LoadingPortal from "../../components/loadingPortal/LoadingPortal";
+import LoadingPortal from "../../components/loadingPortal";
 import { Title } from "../../components/styled/PageTittle";
 import { WrapContainer } from "../../components/styled/WrapContainer";
 import { useInput } from "../../hooks/useInput";
